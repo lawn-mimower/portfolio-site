@@ -3,26 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Engineer Portfolio</title>
+
+  <!-- Page Title & Meta -->
+  <title>Your Name • Portfolio</title>
+  <meta name="description" content="Personal portfolio of [Your Name], Full‑Stack Developer & AI Enthusiast" />
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-  <!-- Only your app code -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha384-…" crossorigin="anonymous" />
+
+  <!-- Main script deferred until after parsing -->
   <script src="main.js" defer></script>
 </head>
-<body>
-  <!-- … your header, sections, etc. … -->
+<body class="light-theme">
 
-  <!-- Chat Widget -->
-  <div class="chat-widget">
+  <!-- Header & Navigation -->
+  <header>
+    <nav class="navbar" role="navigation"> <!-- Semantic nav block -->
+      <div class="logo">YourName</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section"> <!-- Generic standalone section :contentReference[oaicite:3]{index=3} -->
+    <div class="hero-content">
+      <h1>Your Name</h1>           <!-- Top-level heading :contentReference[oaicite:4]{index=4} -->
+      <p>Full‑Stack Developer & AI Enthusiast</p>
+      <a href="#contact" class="cta-button">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I’m [Your Name], a full‑stack developer specializing in modern web
+      technologies, AI integration, and clean UI/UX design.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <!-- Example Card -->
+      <article class="project-card">
+        <h3>Project One</h3>
+        <p>Brief description of Project One.</p>
+        <div class="tech-tags">
+          <span>React</span><span>Node.js</span><span>TensorFlow</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/yourname/project-one" target="_blank">
+            <i class="fab fa-github"></i> Code
+          </a>
+          <a href="https://demo.project-one.com" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Demo
+          </a>
+        </div>
+      </article>
+      <!-- Repeat for other projects -->
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2>Technical Skills</h2>
+    <ul class="skills-list">
+      <li>JavaScript</li><li>Python</li><li>React</li><li>Docker</li>
+      <!-- Add your skills -->
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:youremail@example.com">
+        <i class="fas fa-envelope"></i> youremail@example.com
+      </a>
+    </p>
+  </section>
+
+  <!-- Floating Chat Widget -->
+  <div class="chat-widget"> <!-- region landmark when labelled :contentReference[oaicite:5]{index=5} -->
     <button id="chat-toggle" aria-label="Open chat">
       <i class="fas fa-comment"></i>
     </button>
-    <div class="chat-modal" id="chat-modal" style="display:none">
+    <div class="chat-modal" id="chat-modal" style="display: none;">
       <div class="chat-header">
-        <h3>Ask me anything</h3>
+        <h3>Ask me</h3>
         <button id="close-chat" aria-label="Close chat">
           <i class="fas fa-times"></i>
         </button>
@@ -30,22 +114,19 @@
       <div class="chat-messages" id="chat-messages">
         <div class="chat-message bot">
           <div class="message-content">
-            Hi there! I'm Mihirs's AI assistant. How can I help you today?
+            Hi! Ask me about anything on this site.
           </div>
         </div>
       </div>
       <div class="chat-input">
-        <input
-          type="text"
-          id="message-input"
-          placeholder="Type your message..."
-          aria-label="Type your message"
-        />
+        <input type="text" id="message-input"
+               placeholder="Type a message…" aria-label="Message input" />
         <button id="send-message" aria-label="Send message">
           <i class="fas fa-paper-plane"></i>
         </button>
       </div>
     </div>
   </div>
+
 </body>
 </html>
