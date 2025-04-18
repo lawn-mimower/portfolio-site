@@ -3,110 +3,337 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Page Title & Meta -->
-  <title>Your Name • Portfolio</title>
-  <meta name="description" content="Personal portfolio of [Your Name], Full‑Stack Developer & AI Enthusiast" />
-
-  <!-- Stylesheets -->
+  <title>Mihr Mohite • AIML & Physics Enthusiast | Developer</title>
+  <meta name="description" content="Personal portfolio of Mihr Mohite, an AIML and Physics enthusiast, showcasing projects in embedded systems, machine learning, and software development." />
+  <meta name="keywords" content="Mihr Mohite, AIML, machine learning, physics, developer, portfolio, Lidar, LoRa, SLAM, deep learning, MIT-WPU" />
+  <link rel="icon" href="/path/to/your/favicon.png" type="image/png" /> <meta property="og:title" content="Mihr Mohite • AIML & Physics Enthusiast | Developer" />
+  <meta property="og:description" content="Explore Mihr Mohite's portfolio featuring projects in AIML, IoT, Robotics, and Software Engineering." />
+  <meta property="og:image" content="/path/to/your/og-image.jpg" /> <meta property="og:url" content="https://your-netlify-site-url.netlify.app" /> <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha384-…" crossorigin="anonymous" />
-
-  <!-- Main script deferred until after parsing -->
+        crossorigin="anonymous" />
   <script src="main.js" defer></script>
 </head>
-<body class="light-theme">
-
-  <!-- Header & Navigation -->
-  <header>
-    <nav class="navbar" role="navigation"> <!-- Semantic nav block -->
-      <div class="logo">YourName</div>
+<body class="light-theme"> <header>
+    <nav class="navbar" role="navigation">
+      <div class="logo">Mihr Mohite<span class="accent-dot">.</span></div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
-      </ul>
+        </ul>
       <button id="theme-toggle" aria-label="Toggle theme">
-        <i class="fas fa-moon"></i>
-      </button>
+        <i class="fas fa-moon"></i> </button>
       <button class="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero-section"> <!-- Generic standalone section :contentReference[oaicite:3]{index=3} -->
+  <section id="hero" class="hero-section">
     <div class="hero-content">
-      <h1>Your Name</h1>           <!-- Top-level heading :contentReference[oaicite:4]{index=4} -->
-      <p>Full‑Stack Developer & AI Enthusiast</p>
-      <a href="#contact" class="cta-button">Get In Touch</a>
+      <span class="hero-greeting">Hello, I'm</span>
+      <h1>Mihr Mohite</h1>
+      <p class="hero-tagline">AIML & Physics Enthusiast | Developer</p>
+      <p class="hero-description">Building innovative solutions at the intersection of Artificial Intelligence, Embedded Systems, and Physics.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="cta-button primary">View My Projects</a>
+        <a href="#contact" class="cta-button secondary">Get In Touch</a>
+      </div>
+      <div class="social-links">
+         <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/yourlinkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+    <div class="hero-decoration">
+      <div class="code-window">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <pre class="code-content"><code>const mihr = {
+  name: "Mihr Mohite",
+  focus: ["AIML", "Physics", "Development"],
+  skills: ["Python", "MATLAB", "C++", "ML/DL", "IoT"],
+  goal: "Innovative Problem Solving"
+};</code>
+        </pre>
+      </div>
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about" class="section">
     <h2>About Me</h2>
-    <p>
-      I’m [Your Name], a full‑stack developer specializing in modern web
-      technologies, AI integration, and clean UI/UX design.
-    </p>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <!-- Example Card -->
-      <article class="project-card">
-        <h3>Project One</h3>
-        <p>Brief description of Project One.</p>
-        <div class="tech-tags">
-          <span>React</span><span>Node.js</span><span>TensorFlow</span>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="/path/to/your/profile-photo.jpg" alt="Mihr Mohite" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary-color);">
+        <div class="about-social">
+           <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a> </div>
+      </div>
+      <div class="about-text">
+        <p class="lead">I'm a passionate student developer deeply interested in Artificial Intelligence & Machine Learning (AIML) and Physics.</p>
+        <p>Currently pursuing my studies at MIT-WPU (inferred from CoDeC affiliation), I thrive on applying theoretical knowledge to practical challenges. My journey involves exploring the fascinating connections between physics principles and computational intelligence, leading me to develop projects ranging from IoT devices to complex machine learning models.</p>
+        <p>I'm actively involved in the tech community, serving in leadership roles and participating in hackathons and competitions. I enjoy tackling complex problems, whether it's implementing SLAM algorithms for robotics, forecasting energy loads with deep learning, or designing novel sensor applications.</p>
+        <p>My key achievements include:</p>
+        <ul style="list-style: disc; margin-left: 20px;">
+          <li>SIH (Smart India Hackathon) Round 2 Qualifier</li>
+          <li>Runner-up at Circuit Heist</li>
+          <li>Round 3 Qualifier at Dataquest</li>
+          <li>HackMITWPU participant/winner (Clarify if winner/participant)</li>
+        </ul>
+        <p>When not coding or studying, I enjoy [Mention Your Hobbies/Interests Here, e.g., exploring physics concepts, contributing to open source, reading tech blogs].</p>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/yourname/project-one" target="_blank">
-            <i class="fab fa-github"></i> Code
-          </a>
-          <a href="https://demo.project-one.com" target="_blank">
-            <i class="fas fa-external-link-alt"></i> Demo
-          </a>
-        </div>
-      </article>
-      <!-- Repeat for other projects -->
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <section id="experience" class="section">
+    <h2>Experience & Positions</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">Current</div> <div class="timeline-content">
+          <h3>Vice Technical Head</h3>
+          <h4>CoDeC (Competitive Programming Club), MIT-WPU</h4>
+          <p>Co-leading the technical activities and direction of the official competitive programming club at MIT-WPU.</p>
+          <ul class="experience-details">
+            <li>Overseeing technical workshops and events.</li>
+            <li>Contributing to the club's technical strategy.</li>
+            <li>Mentoring members in programming and problem-solving.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+         <div class="timeline-date">Current</div> <div class="timeline-content">
+          <h3>ML Projects Division Lead</h3>
+          <h4>CoDeC (Competitive Programming Club), MIT-WPU</h4>
+          <p>Leading the Machine Learning project initiatives within CoDeC.</p>
+          <ul class="experience-details">
+            <li>Initiating and guiding ML-focused projects.</li>
+            <li>Organizing sessions and resources for ML learning.</li>
+            <li>Fostering collaboration on AI/ML challenges.</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Featured Projects</h2>
+    <div class="project-filter"> <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="aiml">AI/ML</button>
+      <button class="filter-btn" data-filter="iot">IoT/Hardware</button>
+      <button class="filter-btn" data-filter="software">Software/Simulation</button>
+    </div>
+    <div class="project-grid">
+
+      <article class="project-card" data-category="iot aiml">
+        <div class="project-image" style="background-image: url('/path/to/scout-rover.jpg')"></div>
+        <div class="project-content">
+          <h3>Scout Rover for Dangerous Environments</h3>
+          <p>Developed a rover capable of navigating hazardous areas using LiDAR-based SLAM for mapping (MATLAB) and equipped with Temperature, Humidity, Ultrasonic, and MQ5 gas sensors for environmental monitoring.</p>
+          <div class="tech-tags">
+            <span>LiDAR</span><span>SLAM</span><span>MATLAB</span><span>Robotics</span><span>Sensors (MQ5, DHT, US)</span><span>IoT</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo/Video</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="aiml software">
+         <div class="project-image" style="background-image: url('/path/to/load-forecasting.jpg')"></div>
+        <div class="project-content">
+          <h3>Electric Load Forecasting (Delhi)</h3>
+          <p>Implemented an MLP (Multi-Layer Perceptron) deep learning model to forecast electricity demand in Delhi, aiding in resource management.</p>
+          <div class="tech-tags">
+            <span>Deep Learning</span><span>MLP</span><span>Python</span><span>TensorFlow/Keras</span><span>Data Analysis</span><span>Time Series</span>
+          </div>
+          <div class="project-links">
+             <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Report/Demo</a>
+          </div>
+        </div>
+      </article>
+
+       <article class="project-card" data-category="iot hardware">
+         <div class="project-image" style="background-image: url('/path/to/solar-tracker.jpg')"></div>
+        <div class="project-content">
+          <h3>LDR-Based Solar Tracker</h3>
+          <p>Designed and built a solar tracking system using Light Dependent Resistors (LDRs) to automatically orient solar panels towards the sun for maximum energy capture.</p>
+          <div class="tech-tags">
+            <span>IoT</span><span>Arduino/ESP</span><span>LDR Sensors</span><span>Servo Motors</span><span>Hardware</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+        </div>
+      </article>
+
+       <article class="project-card" data-category="iot hardware">
+        <div class="project-image" style="background-image: url('/path/to/sos-tracker.jpg')"></div>
+        <div class="project-content">
+          <h3>SOS Tracker (LoRa Based)</h3>
+          <p>Developed an emergency SOS tracker utilizing LoRa (433 MHz FM) communication for long-range, low-power distress signaling in areas with poor connectivity.</p>
+          <div class="tech-tags">
+            <span>IoT</span><span>LoRa</span><span>433MHz</span><span>GPS (Optional)</span><span>Embedded Systems</span><span>Hardware</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+        </div>
+      </article>
+
+       <article class="project-card" data-category="software aiml iot">
+         <div class="project-image" style="background-image: url('/path/to/fan-speed.jpg')"></div>
+        <div class="project-content">
+          <h3>LiDAR-Based Fan Speed Detector</h3>
+          <p>Created a system using LiDAR and MATLAB's Fast Fourier Transform (FFT) to non-contactually measure the rotational speed of fans.</p>
+          <div class="tech-tags">
+            <span>LiDAR</span><span>MATLAB</span><span>FFT</span><span>Signal Processing</span><span>Sensors</span>
+          </div>
+          <div class="project-links">
+             <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="software web">
+        <div class="project-image" style="background-image: url('/path/to/feedback-system.jpg')"></div>
+        <div class="project-content">
+          <h3>University Level Feedback System (In Progress)</h3>
+          <p>Currently developing a comprehensive feedback system tailored for a university environment, potentially incorporating features like sentiment analysis or data visualization.</p>
+          <div class="tech-tags">
+            <span>Web Development</span><span>Database</span><span>Backend</span><span>Frontend</span><span>(Add specific tech)</span>
+          </div>
+          <div class="project-links">
+             <a href="#" target="_blank"><i class="fab fa-github"></i> Code (Private?)</a>
+            </div>
+        </div>
+      </article>
+
+    </div>
+    <div class="more-projects">
+       <a href="https://github.com/yourusername" class="button outline" target="_blank">
+        <i class="fab fa-github"></i> View More Projects on GitHub
+      </a>
+    </div>
+  </section>
+
   <section id="skills" class="section">
     <h2>Technical Skills</h2>
-    <ul class="skills-list">
-      <li>JavaScript</li><li>Python</li><li>React</li><li>Docker</li>
-      <!-- Add your skills -->
-    </ul>
+    <div class="skills-container">
+      <div class="skills-category">
+        <h3>AI & Machine Learning</h3>
+        <div class="skills-tags">
+          <span>Python</span><span>TensorFlow</span><span>Keras</span><span>PyTorch</span><span>Scikit-learn</span><span>MLP</span><span>Deep Learning</span><span>NLP (Basic)</span><span>Computer Vision (Basic)</span><span>Data Analysis</span>
+        </div>
+      </div>
+       <div class="skills-category">
+        <h3>Software & Simulation</h3>
+        <div class="skills-tags">
+           <span>MATLAB</span><span>C++</span><span>C</span><span>Python</span><span>Java (Basic)</span><span>Git</span><span>GitHub</span><span>SLAML</span><span>FFT</span><span>Algorithm Design</span>
+        </div>
+      </div>
+       <div class="skills-category">
+        <h3>Hardware & IoT</h3>
+        <div class="skills-tags">
+          <span>Arduino</span><span>ESP32/8266</span><span>Raspberry Pi</span><span>LiDAR</span><span>LoRa</span><span>Sensors (Various)</span><span>Embedded C</span><span>Circuit Design (Basic)</span><span>IoT Platforms (Basic)</span>
+        </div>
+      </div>
+      <div class="skills-category">
+        <h3>Web Development (Basic)</h3>
+        <div class="skills-tags">
+          <span>HTML5</span><span>CSS3</span><span>JavaScript (Basic)</span><span>Node.js (Basic)</span><span>React (Learning)</span><span>Databases (SQL/NoSQL Basics)</span>
+        </div>
+      </div>
+      </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>
-      <a href="mailto:youremail@example.com">
-        <i class="fas fa-envelope"></i> youremail@example.com
-      </a>
-    </p>
+    <h2>Get In Touch</h2>
+    <div class="contact-content">
+      <div class="contact-text">
+        <p class="lead">Interested in collaborating or discussing tech? Let's connect!</p>
+        <p>I'm always open to new ideas, projects, and learning opportunities. Feel free to reach out via email or connect on social media.</p>
+      </div>
+
+      <div class="contact-form-container"> <form id="contact-form" class="contact-form" name="contact" method="POST" data-netlify="true">
+           <input type="hidden" name="form-name" value="contact">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+
+      <div class="contact-links">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>youremail@example.com</span> </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Pune, Maharashtra, India</span> </div>
+      </div>
+
+      <div class="social-links-large">
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
   </section>
 
-  <!-- Floating Chat Widget -->
-  <div class="chat-widget"> <!-- region landmark when labelled :contentReference[oaicite:5]{index=5} -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        Mihr Mohite<span class="accent-dot">.</span>
+      </div>
+      <p class="footer-tagline">AIML & Physics Enthusiast | Developer</p>
+      <div class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-social">
+         <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a> </div>
+      <p class="copyright">&copy; 2025 Mihr Mohite. All rights reserved.</p> </div>
+  </footer>
+
+  <div class="chat-widget">
     <button id="chat-toggle" aria-label="Open chat">
       <i class="fas fa-comment"></i>
     </button>
     <div class="chat-modal" id="chat-modal" style="display: none;">
       <div class="chat-header">
-        <h3>Ask me</h3>
+        <h3>Ask about Mihr</h3>
         <button id="close-chat" aria-label="Close chat">
           <i class="fas fa-times"></i>
         </button>
@@ -114,13 +341,13 @@
       <div class="chat-messages" id="chat-messages">
         <div class="chat-message bot">
           <div class="message-content">
-            Hi! Ask me about anything on this site.
+            Hi there! I'm an AI assistant. Ask me anything about Mihr Mohite's skills, projects, or experience based on this portfolio.
           </div>
         </div>
-      </div>
+        </div>
       <div class="chat-input">
         <input type="text" id="message-input"
-               placeholder="Type a message…" aria-label="Message input" />
+               placeholder="Type your question..." aria-label="Message input" />
         <button id="send-message" aria-label="Send message">
           <i class="fas fa-paper-plane"></i>
         </button>
@@ -128,5 +355,162 @@
     </div>
   </div>
 
+  <script>
+      // Theme toggling (Keep this logic)
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = themeToggle.querySelector('i');
+      const body = document.body;
+
+      function applyTheme(theme) {
+          body.classList.remove('light-theme', 'dark-theme');
+          body.classList.add(theme + '-theme');
+          if (theme === 'dark') {
+              themeIcon.classList.remove('fa-moon');
+              themeIcon.classList.add('fa-sun');
+          } else {
+              themeIcon.classList.remove('fa-sun');
+              themeIcon.classList.add('fa-moon');
+          }
+          localStorage.setItem('theme', theme);
+      }
+
+      themeToggle.addEventListener('click', () => {
+          const newTheme = body.classList.contains('dark-theme') ? 'light' : 'dark';
+          applyTheme(newTheme);
+      });
+
+      // Check for saved theme preference on load
+      const savedTheme = localStorage.getItem('theme') || 'light'; // Default to light
+      applyTheme(savedTheme);
+
+
+      // Mobile menu toggle (Keep this logic)
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+
+      // Close mobile menu when a link is clicked
+      navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+              if (navLinks.classList.contains('active')) {
+                  navLinks.classList.remove('active');
+                  hamburger.classList.remove('active');
+              }
+          });
+      });
+
+
+      // Project filtering (Keep this logic)
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.getAttribute('data-filter');
+
+          projectCards.forEach(card => {
+            const categories = card.getAttribute('data-category').split(' ');
+            if (filter === 'all' || categories.includes(filter)) {
+              card.style.display = 'block'; // Or 'grid', 'flex' depending on your layout
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Form submission handling (Keep if using Netlify forms)
+      // const contactForm = document.getElementById('contact-form');
+      // contactForm.addEventListener('submit', ...) // Add AJAX submission if desired
+
+      // --- NEW CHAT WIDGET LOGIC ---
+      const chatToggle = document.getElementById('chat-toggle');
+      const chatModal = document.getElementById('chat-modal');
+      const closeChat = document.getElementById('close-chat');
+      const chatMessages = document.getElementById('chat-messages');
+      const messageInput = document.getElementById('message-input');
+      const sendMessageBtn = document.getElementById('send-message');
+
+      chatToggle.addEventListener('click', () => {
+          chatModal.style.display = 'flex'; // Use flex for layout
+          chatToggle.style.display = 'none'; // Hide toggle button when open
+      });
+
+      closeChat.addEventListener('click', () => {
+          chatModal.style.display = 'none';
+          chatToggle.style.display = 'block'; // Show toggle button when closed
+      });
+
+      function addMessage(sender, text) {
+          const messageDiv = document.createElement('div');
+          messageDiv.classList.add('chat-message', sender); // sender is 'user' or 'bot'
+          const contentDiv = document.createElement('div');
+          contentDiv.classList.add('message-content');
+          contentDiv.textContent = text; // Use textContent for security
+          messageDiv.appendChild(contentDiv);
+          chatMessages.appendChild(messageDiv);
+          chatMessages.scrollTop = chatMessages.scrollHeight; // Auto-scroll
+      }
+
+      async function handleSendMessage() {
+          const userText = messageInput.value.trim();
+          if (!userText) return;
+
+          addMessage('user', userText);
+          messageInput.value = '';
+          sendMessageBtn.disabled = true; // Disable button while processing
+
+          // Add a temporary "typing" indicator (optional)
+          const typingIndicator = document.createElement('div');
+          typingIndicator.classList.add('chat-message', 'bot', 'typing');
+          typingIndicator.innerHTML = '<div class="message-content"><span>.</span><span>.</span><span>.</span></div>';
+          chatMessages.appendChild(typingIndicator);
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+
+          try {
+              const response = await fetch('/api/chat', { // Use the proxied path from netlify.toml
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({ text: userText }),
+              });
+
+              chatMessages.removeChild(typingIndicator); // Remove typing indicator
+
+              if (!response.ok) {
+                  const errorData = await response.json();
+                  throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+              }
+
+              const data = await response.json();
+              addMessage('bot', data.reply);
+
+          } catch (error) {
+              console.error('Chat fetch error:', error);
+              addMessage('bot', `Sorry, I encountered an error: ${error.message}`);
+              if (chatMessages.contains(typingIndicator)) { // Ensure indicator is removed on error too
+                   chatMessages.removeChild(typingIndicator);
+              }
+          } finally {
+              sendMessageBtn.disabled = false; // Re-enable button
+              messageInput.focus();
+          }
+      }
+
+      sendMessageBtn.addEventListener('click', handleSendMessage);
+      messageInput.addEventListener('keypress', (event) => {
+          if (event.key === 'Enter') {
+              handleSendMessage();
+          }
+      });
+
+  </script>
 </body>
 </html>
