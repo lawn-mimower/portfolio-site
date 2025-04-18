@@ -1,0 +1,71 @@
+# ┌───────────────────────────────────────────────────────────────────────────┐
+# │ 1) Build & publish settings                                           │
+# └───────────────────────────────────────────────────────────────────────────┘
+[build]
+  publish   = "."                   # static site root
+  functions = "netlify/functions"   # folder where your chat.js lives
+  command   = "echo 'No build needed for static site'"
+
+# ┌───────────────────────────────────────────────────────────────────────────┐
+# │ 2) Environment variables                                              │
+# └───────────────────────────────────────────────────────────────────────────┘
+[build.environment]
+  # Set this in Netlify UI (Dashboard → Site settings → Build & deploy → Environment)
+  # Do NOT commit your API key to git!
+  GENAI_API_KEY       = "•••••••••••••••"  
+  VERTEXAI_PROJECT_ID = "alien-fold-456504-b6"
+  VERTEXAI_LOCATION   = "us-central1"
+
+# ┌───────────────────────────────────────────────────────────────────────────┘
+# │ 3) Redirects                                                           │
+# └───────────────────────────────────────────────────────────────────────────┘
+# Single‑Page App routing:
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
+
+# Proxy /api/chat to your chat function:
+[[redirects]]
+  from   = "/api/chat"
+  to     = "/.netlify/functions/chat"
+  status = 200
+  force  = true
+
+# ┌───────────────────────────────────────────────────────────────────────────┐
+# │ 4) Security & caching headers                                         │
+# └───────────────────────────────────────────────────────────────────────────┘
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options            = "DENY"
+    X-XSS-Protection           = "1; mode=block"
+    X-Content-Type-Options     = "nosniff"
+    Referrer-Policy            = "no-referrer-when-downgrade"
+    Content-Security-Policy    = "default-src 'self' https://cdnjs.cloudflare.com https://images.unsplash.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' https://images.unsplash.com data:; font-src 'self' https://cdnjs.cloudflare.com data:;"
+
+# Cache static assets for one week:
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
