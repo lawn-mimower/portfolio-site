@@ -95,7 +95,7 @@ async function handleSendMessage() {
     addMessage(reply);
   } catch (err) {
     console.error(err);
-    addMessage('Sorry, something went wrong.');
+    addMessage('Sorry something went wrong.');
   }
 }
 
@@ -106,28 +106,20 @@ messageInput.addEventListener('keypress', e => {
 
 // --- AI API Call ---
 async function sendMessageToAI(text) {
-  // Initialize Gen AI client (requires <script> SDK tag in your HTML)
-  const client = new genai.Client({
-    project:   'gen-lang-client-0936015489',  // your GCP project
-    location:  'us-central1',
-    vertexai:  true,
-
-    // If you must prototype in-browser, uncomment next line:
-    apiKey: 'AIzaSyDxqHBmZ5CveuMBC9zPgFoXKhJf1VZ28DY'
-  });
-
-  const result = await client.models.generateContent({
-    model:    'gemini-2.0-flash-exp',
-    contents: [{ text }]
-  });
-
-  // If using .candidates response shape:
-  if (result.candidates?.length) {
-    return result.candidates[0].content.parts[0].text;
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text })
+    });
+  
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || 'Network error');
+    }
+  
+    const { reply } = await res.json();
+    return reply;
   }
-  // Otherwise, fall back:
-  return result.text || 'No response';
-}
 
 // --- Project Section Animation Delays ---
 document.querySelectorAll('.project-card').forEach((card, i) => {
