@@ -4,112 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Developer Portfolio</title>
-
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   />
-
-  <!-- 1) Load the Google Gen AI SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@google/generative-ai@latest"></script>
-
-  <!-- 2) Load your main.js AFTER the SDK (deferred until DOM is ready) -->
+  <!-- Only your app code -->
   <script src="main.js" defer></script>
 </head>
-<body class="light-theme">
-  <header>
-    <nav class="navbar">
-      <div class="logo">DevPortfolio</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button id="theme-toggle" aria-label="Toggle theme">
-        <i class="fas fa-moon"></i>
-      </button>
-      <div class="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </nav>
-  </header>
-
-  <section id="hero" class="hero-section">
-    <div class="hero-content">
-      <h1>Jane Developer</h1>
-      <p>Full-Stack Engineer & Prompt Engineering Specialist</p>
-      <a href="#contact" class="cta-button">Get In Touch</a>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <div class="about-image">
-        <div class="image-placeholder"></div>
-      </div>
-      <div class="about-text">
-        <p>
-          Hi there! I'm a passionate full-stack developer with expertise in
-          modern web technologies and AI integration. With over 5 years of
-          experience building responsive, user-friendly applications, I
-          specialize in creating seamless experiences across the entire
-          development stack.
-        </p>
-        <p>
-          My recent focus has been on AI integration, particularly prompt
-          engineering for large language models. I believe in writing clean,
-          maintainable code and staying current with emerging technologies and
-          best practices.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="section">
-    <h2>Work Experience</h2>
-    <div class="timeline">
-      <!-- timeline items… -->
-    </div>
-  </section>
-
-  <section id="projects" class="section">
-    <h2>Featured Projects</h2>
-    <div class="project-grid">
-      <!-- project cards… -->
-    </div>
-  </section>
-
-  <section id="skills" class="section">
-    <h2>Technical Skills</h2>
-    <div class="skills-container">
-      <!-- skills categories… -->
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Get In Touch</h2>
-    <div class="contact-content">
-      <!-- contact links… -->
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-content">
-      <p>© 2025 Jane Developer. All rights reserved.</p>
-    </div>
-  </footer>
+<body>
+  <!-- … your header, sections, etc. … -->
 
   <!-- Chat Widget -->
   <div class="chat-widget">
     <button id="chat-toggle" aria-label="Open chat">
       <i class="fas fa-comment"></i>
     </button>
-    <div class="chat-modal" id="chat-modal" style="display: none;">
+    <div class="chat-modal" id="chat-modal" style="display:none">
       <div class="chat-header">
         <h3>Ask me anything</h3>
         <button id="close-chat" aria-label="Close chat">
