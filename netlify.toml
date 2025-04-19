@@ -19,18 +19,19 @@
 # ┌───────────────────────────────────────────────────────────────────────────┘
 # │ 3) Redirects                                                           │
 # └───────────────────────────────────────────────────────────────────────────┘
-# Single‑Page App routing:
-[[redirects]]
-  from   = "/*"
-  to     = "/index.html"
-  status = 200
 
-# Proxy /api/chat to your chat function:
+# 3.1) Proxy /api/chat to your chat function (must come first)
 [[redirects]]
   from   = "/api/chat"
   to     = "/.netlify/functions/chat"
   status = 200
   force  = true
+
+# 3.2) Single‑Page App fallback for all other routes
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
 
 # ┌───────────────────────────────────────────────────────────────────────────┐
 # │ 4) Security & caching headers                                         │
