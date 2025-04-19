@@ -1,4 +1,37 @@
 /* Contact - Steampunk/Cyberpunk form */
+:root {
+    /* Theme colors */
+    --bg-color: #f4f4f8;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --accent-color: #d7b95f; /* Steampunk gold */
+    --accent-hover: #c5a54d;
+    --primary-color: #d7b95f;
+    --secondary-color: #746b5e;
+    --border-color: rgba(0, 0, 0, 0.1);
+    
+    /* Navbar specific */
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    
+    /* Decorative elements */
+    --gear-color: #d7b95f;
+    --pipe-color: #8a795d;
+    
+    /* Other variables */
+    --max-width: 1200px;
+    --transition-speed: 0.3s;
+  }
+  
+  /* Dark theme colors */
+  .dark-theme {
+    --bg-color: #1a1a2e;
+    --card-bg: #16213e;
+    --text-color: #e6e6e6;
+    --accent-color: #d7b95f;
+    --accent-hover: #c5a54d;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --navbar-bg: rgba(26, 26, 46, 0.95);
+  }
 .contact-form-container {
   margin-bottom: 2rem;
   border: 1px solid var(--border-color);
